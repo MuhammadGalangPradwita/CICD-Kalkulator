@@ -1,0 +1,88 @@
+/* Reset dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Container utama kalkulator */
+.calculator {
+    width: 320px;
+    padding: 20px;
+    background-color: #2C3A47; /* Dark blue-grey */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tampilan input kalkulator */
+#display {
+    width: calc(100% - 22px); /* Akomodasi padding */
+    padding: 10px;
+    font-size: 2.5em;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background-color: #1e272e; /* Background gelap untuk tampilan */
+    color: #ffffff;
+}
+
+/* Grid tombol kalkulator */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Tombol umum */
+button {
+    padding: 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #535c68; /* Warna abu-abu menengah */
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+/* Efek hover dan aktif */
+button:hover {
+    background-color: #718093; /* Abu-abu lebih terang */
+}
+
+button:active {
+    background-color: #3d3d3d; /* Abu-abu lebih gelap saat ditekan */
+}
+
+/* Operator (+, -, *, /) */
+.operator {
+    background-color: #ff9f43; /* Oranye untuk operator */
+}
+
+.operator:hover {
+    background-color: #f39c12; /* Oranye lebih gelap saat dihover */
+}
+
+/* Tombol sama dengan (=) */
+.equals {
+    grid-row: span 2; /* Memakan dua baris */
+    background-color: #2ed573; /* Hijau untuk hasil */
+}
+
+.equals:hover {
+    background-color: #26de81; /* Hijau cerah saat dihover */
+}
+
+/* Tombol nol (memakan dua kolom) */
+.zero {
+    grid-column: span 2;
+}
