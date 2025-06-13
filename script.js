@@ -28,7 +28,6 @@ function isOperator(value) {
  */
 function clearDisplay() {
     display.value = '';
-    let unusedVariableForDemo = "hello"; // Variabel ini tidak digunakan
 }
 
 
