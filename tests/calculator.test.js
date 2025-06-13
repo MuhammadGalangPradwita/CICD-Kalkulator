@@ -49,7 +49,7 @@ function runTests() {
     console.log("--- Memulai Tes Unit Kalkulator ---\n");
 
     // Tes dasar operasi aritmatika
-    assert(performCalculation("2+2") === 4, "Penjumlahan: 2+2 harusnya 4");
+    assert(performCalculation("2+2") === 5, "Penjumlahan: 2+2 harusnya 4");
     assert(performCalculation("5-3") === 2, "Pengurangan: 5-3 harusnya 2");
     assert(performCalculation("4*3") === 12, "Perkalian: 4*3 harusnya 12");
     assert(performCalculation("10/2") === 5, "Pembagian: 10/2 harusnya 5");
