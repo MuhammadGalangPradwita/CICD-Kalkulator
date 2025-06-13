@@ -27,13 +27,13 @@ jobs:
           echo "Menjalankan tes unit kalkulator..."
           node tests/calculator.test.js
 
-      - name: Setup JDK 17 untuk SonarQube
+      - name: Setup JDK 17 untuk SonarCloud
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Cache paket SonarQube
+      - name: Cache paket SonarCloud
         uses: actions/cache@v4
         with:
           path: ~/.sonar/cache
@@ -44,14 +44,14 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: c0159582f834fc8c1313ae2388f6c825d9920a24
         with:
           projectBaseDir: .
           args: >
-            -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
-            -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+            -Dsonar.organization=muhammadgalangpradwita
+            -Dsonar.projectKey=MuhammadGalangPradwita_CICD-Kalkulator
             -Dsonar.sources=.
-            -Dsonar.host.url=${{ secrets.SONAR_HOST_URL }}
+            -Dsonar.host.url=https://sonarcloud.io
 
   build-docker-image:
     name: Build Docker Image
