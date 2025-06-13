@@ -95,7 +95,7 @@ jobs:
 
       # Build halaman web (jika diperlukan)
       # - name: Build Halaman Web
-      #   run: npm install && npm run build
+      #   run: npm install && npm run build # (atau perintah build yang sesuai)
 
       - name: Deploy ke GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
